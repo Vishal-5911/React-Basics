@@ -1,21 +1,17 @@
 import { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router";
-
 const Login = () => {
   const nav = useNavigate();
   let location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   console.log("locaton", location);
-
   const loginUser = () => {
     // login fn
     const obj = { Name: email, pass: password };
     localStorage.setItem("user-data", JSON.stringify(obj));
     nav("/dashboard", { replace: true });
   };
-
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>Login up page</h1>
