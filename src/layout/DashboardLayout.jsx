@@ -12,10 +12,10 @@ const DashboardLayout = () => {
     });
   };
 
-  if (!user) {
-    // redirect user to login page
-    return <Navigate to="/" replace />;
-  }
+  // if (!user) {
+  //   // redirect user to login page
+  //   return <Navigate to="/" replace />;
+  // }
 
   return (
     <div>
@@ -47,5 +47,4 @@ const DashboardLayout = () => {
     </div>
   );
 };
-
 export default DashboardLayout;
